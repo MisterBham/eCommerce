@@ -15,14 +15,6 @@ app.use(express.json());
 if (!DBuser || !DBpassword) {
   throw new Error("Ensure DBuser and/or DBpassword inputs are correct in .env file. If using the provided .env.EXAMPLE file, be sure to rename file to .env, removing the ending .EXAMPLE")
 }
-//   {
-//     host: 'localhost',
-//     user: 'root',
-//     password: 'p@ssw0rd',
-//     database: 'ecommerce_db'
-//   },
-//   console.log(`Connected to the ecommerce_db database.`)
-// );
 
 const db = mysql.createPool(
   {
